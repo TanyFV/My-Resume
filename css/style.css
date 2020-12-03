@@ -107,7 +107,6 @@
   color: var(--txt-c-light);
 }
 
-
   .front-page{
     width: 320px;
     background: var(--c-dark);
@@ -127,7 +126,7 @@
     text-align: center;
     margin: 35px 0 10px 0;
   }
-  
+
   .front-page-profession {
     font-weight: bold;
     font-size: 35px;
@@ -137,7 +136,7 @@
     color: var(--txt-c-light);
     margin-bottom: 20px;
   }
-  
+
   .front-page-description {
     font-size: 16px;
     line-height: 150%;
@@ -145,7 +144,7 @@
     color: var(--txt-c-light);
     margin-bottom: 20px;
   }
-  
+
   .navigation {
     width: 100%;
     display: flex;
@@ -153,13 +152,14 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .navigation-part{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
+
   .hire-me-btn {
     font-weight: 800;
     font-size: 15px;
@@ -169,7 +169,7 @@
     text-decoration: none;
     margin: 0 20px 0 0;
   }
-  
+
   .mobile-menu {
     width: 30px;
     height: 30px;
@@ -180,7 +180,7 @@
     align-items: center;
     text-decoration: none;
   }
-  
+
   .mobile-menu i {
     color: var(--c-light);
   }
@@ -193,9 +193,8 @@
   .front-page-my-photo {
     width: 100px;
     margin-bottom: 20px;
-
   }
-  
+
   .front-page-my-decr {
     font-weight: bold;
     font-size: 15px;
@@ -206,7 +205,7 @@
     color: var(--txt-c-light);
     margin: 0 0 15px 0;
   }
-  
+
   .front-page-my-video-btn {
     border: 2px solid var(--c-accent);
     color: var(--txt-c-accent);
@@ -219,19 +218,19 @@
     display: flex;
     align-items: center;
   }
-  
+
   .front-page-my-video-btn .fa-play {
     font-size: 9px;
     margin-right: 7px;
   }
-  
+
   .front-page-laptop {
     width: 250px;
     margin-bottom: 40px;
   }
-  
+
   /* EXPERIENCE */
-  
+
   .experience-title {
     width: 240px;
     font-weight: bold;
@@ -243,44 +242,43 @@
     color: var(--txt-c-light);
     margin: 0 0 30px 0;
   }
-  
+
   .experience-skill {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 28px;
+    
   }
-  
+
   .experience-dots {
     display: flex;
     align-items: center;
     margin-right: 10px;
   }
-  
+
   .experience-dots-item {
     color: var(--c-grey-blue);
     font-size: 8px;
     margin-right: 5px;
   }
-  
+
   .experience-dots-item-accent {
     color: var(--c-accent);
   }
-  
+
   .experience-text {
     color: var(--txt-c-light);
     margin: 0;
     font-size: 16px;
     line-height: 19px;
   }
-  
+
   .experience-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  
-  
+
   /* ABOUT PAGE */
 
 .about-title {
