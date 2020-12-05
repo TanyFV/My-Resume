@@ -549,6 +549,9 @@
 .calculator {
   background: var(--c-dark);
 }
+.calculator .container{
+  padding-bottom: 75px;
+}
 
 .calculator-icon {
   width: 195px;
