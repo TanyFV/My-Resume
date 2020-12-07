@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="choices.min.css">
+    <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -25,7 +25,7 @@
                 </a>
             </div>
         </nav>
-        <h1 class="front-page-my-name">[TATIANA] </h1>
+        <h1 class="front-page-my-name">[TATIANA FEDORINA] </h1>
         <h2 class="front-page-profession">{Frontend}</h2>
         <h2 class="front-page-profession">_DEVELOPER</h2>
         <p class="front-page-description">/ Using HTML, CSS, JavaScript, React Native and Node.js I help to build
@@ -291,47 +291,51 @@
                 <div class="calculator-form-input">
                     <lable for="calculator-form-website-type" class="calculator-form-title">What should be done:</lable>
                     <select name="website-type" id="calculator-form-website-type" class="calculator-form-select">
-                        <option value="landing-page" selected>Langing Page</option>
-                        <option value="website">Website</option>
-                        <option value="cms">CMS</option>
-                        <option value="portal">Portal</option>
-                        <option value="e-shop">E-Shop</option>
+                        <option value="landing-page:200" selected>Langing Page</option>
+                        <option value="website:500">Website</option>
+                        <option value="cms:800">CMS</option>
+                        <option value="portal:1200">Portal</option>
+                        <option value="e-shop:2000">E-Shop</option>
                     </select>
                 </div>
                 <div class="calculator-form-input">
                     <lable for="calculator-form-technologies" class="calculator-form-title">Choose preferred
                         technologies</lable>
-                    <select name="technologies" id="calculator-form-technologies" class="calculator-form-select">
-                        <option value="CSS">CSS</option>
-                        <option value="HTML">HTML</option>
-                        <option value="JS">JS</option>
-                        <option value="React">React</option>
-                        <option value="Angular">Angular</option>
-                        <option value="PHP">PHP</option>
+                    <select name="technologies" id="calculator-form-technologies" class="calculator-form-select"
+                        multiple>
+                        <option selected value="CSS:200">CSS</option>
+                        <option selected value="HTML:200">HTML</option>
+                        <option selected value="JS:400">JS</option>
+                        <option value="React:700">React</option>
+                        <option value="Angular:700">Angular</option>
+                        <option value="PHP:1000">PHP</option>
                     </select>
                 </div>
 
                 <div class="calculator-form-input">
                     <label for="" class="calculator-form-title">Personal account and shopping cart:</label>
-                    <div class="calculator-form-input-radio-container">
+                    <div class="calculator-form-input-radio-container" id="calculator-form-input-cart">
 
-                        <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-yes">
+                        <input checked type="radio" class="calculator-form-input-field"
+                            id="calculator-form-input-cart-yes" name="cart" value="yes">
                         <label for="calculator-form-input-cart-yes" class="calculator-form-input-label">Yes</label>
 
-                        <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-no">
+                        <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-no"
+                            name="cart" value="no">
                         <label for="calculator-form-input-cart-no" class="calculator-form-input-label">No</label>
                     </div>
                 </div>
 
                 <div class="calculator-form-input">
                     <label for="" class="calculator-form-title">Requests reception on your email:</label>
-                    <div class="calculator-form-input-radio-container">
+                    <div class="calculator-form-input-radio-container" id="calculator-form-input-reseption">
 
-                        <input type="radio" class="calculator-form-input-field"
-                            id="calculator-form-input-reseption-yes">
+                        <input checked type="radio" class="calculator-form-input-field"
+                            id="calculator-form-input-reseption-yes" name="reseption" value="yes">
                         <label for="calculator-form-input-reseption-yes" class="calculator-form-input-label">Yes</label>
 
-                        <input type="radio" class="calculator-form-input-field" id="calculator-form-input-reseption-no">
+                        <input type="radio" class="calculator-form-input-field" id="calculator-form-input-reseption-no"
+                            name="reseption" value="no">
                         <label for="calculator-form-input-reseption-no" class="calculator-form-input-label">No</label>
                     </div>
                 </div>
@@ -370,6 +374,7 @@
         </div>
     </footer>
     <script src="js/choices.min.js"></script>
+    <script src="js/calculator.js"></script>
 </body>
 
 </html>

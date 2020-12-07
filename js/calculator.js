@@ -1,3 +1,5 @@
+const technologiesSelect = document.querySelector('#calculator-form-technologies');
+
 const technologiesMultiSelect = new Choices(technologiesSelect, {
     allowSearch: false,
     silent: false,
@@ -20,7 +22,78 @@ const technologiesMultiSelect = new Choices(technologiesSelect, {
     noChoicesText: "No available options",
     itemSelectText: "Click to select",
     classNames: {
-      containerInner: "choices__inner tech-input-container",
-      input: "choices__input",
+        containerInner: "choices__inner tech-input-container",
+        input: "choices__input",
     },
-  });
+});
+
+calculateSum();
+
+const calculatorForm = document.querySelector('.calculator-form');
+
+calculatorForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    calculateSum();
+
+});
+
+function calculateSum() {
+    //selectors
+    const websiteTypeSelect = document.querySelector('#calculator-form-website-type');
+    const wedsiteCart = document.querySelector('#calculator-form-input-cart input:checked');
+    const wedsiteReseption = document.querySelector('#calculator-form-input-reseption input:checked');
+
+    //values
+    const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value);
+    const technologiesValue = getTechnologiesSum(technologiesMultiSelect.getValue());
+    const wedsiteCartValue = convertCartOptionToPrice(wedsiteCart.value);
+    const wedsiteReseptionValue = convertReceptionOptionToPrice(wedsiteReseption.value);
+    // console.log(wedsiteCartValue);
+    // console.log(websiteTypeValue);
+    // console.log(technologiesValue);
+    // console.log(wedsiteCartValue);
+    // console.log(wedsiteReseptionValue)
+    const totalSum = websiteTypeValue + technologiesValue + wedsiteCartValue + wedsiteReseptionValue;
+    renderSum(totalSum);
+}
+
+function renderSum(sum) {
+    const costElement = document.querySelector('.calculator-form-total-cost');
+
+    costElement.textContent = "Calculating...";
+    setTimeout(function(){
+        costElement.textContent = sum + "$";
+    }, 2000);
+
+    
+}
+
+function convertCartOptionToPrice(option) {
+    if (option === "yes")
+        return 100;
+    return 0;
+}
+
+function convertReceptionOptionToPrice(option) {
+    if (option == "yes")
+        return 200;
+    return 0;
+}
+
+function getTechnologiesSum(technologiesArr) {
+    let totalSum = 0;
+    technologiesArr.forEach(function (tech) {
+        totalSum = totalSum + extractPriceFromValue(tech.value)
+    })
+    return totalSum;
+}
+
+function extractPriceFromValue(str) {
+    const price = str.match(/:\d+/);
+
+    if (price) {
+        return Number(price[0].slice(1)) || 0;
+    }
+
+    return 0;
+}
